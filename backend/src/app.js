@@ -1,6 +1,7 @@
 /*importamos el framework express*/
 
 import express from "express";
+import cors from "cors";
 import categoriasRoutes from "./routes/categorias.routes.js";
 /*Asignar funcionalidad para mi server web*/
 const app = express();
@@ -8,7 +9,8 @@ const app = express();
 /*setear puerto a mi server web*/
 
 app.set("port",5000);
-
+app.use(cors());
+/*funcionalidad para leer los datos de un json
 
 /*rutas*/
 
