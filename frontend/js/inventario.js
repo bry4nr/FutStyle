@@ -12,9 +12,7 @@ const url = "http://localhost:5000/api/categorias";
 import { obtainCategories } from "../apiConnection/consumeApi.js";
 document.addEventListener('DOMContentLoaded', () => {
     getCategories();
-});
-
-
+})
 
  async function getCategories(){
     const categoriesObtained = await obtainCategories();
