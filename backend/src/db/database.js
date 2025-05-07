@@ -1,8 +1,8 @@
-import mysql from "promise-mysql";
+import mysql from "mysql2/promise";
 
 import config from "../config.js";
 
-const connection = mysql.createConnection({
+const connection = mysql.createPool({
   host: config.host,
   user: config.user,
   password: config.password,
@@ -10,7 +10,7 @@ const connection = mysql.createConnection({
 });
 
 const getConnection = () => {
-  return connection
-}
+  return connection;
+};
 
 export default getConnection;
